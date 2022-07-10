@@ -1,0 +1,18 @@
+{
+  "category": "listeners"
+}
+---
+import { Listener } from "@sapphire/framework";
+import type { Client } from "discord.js";
+
+export class {{name}}Listener extends Listener {
+  public constructor(context: Listener.Context, options: Listener.Options) {
+    super(context, {
+      ...options,
+      once: false,
+      event: "{{name}}",
+    });
+  }
+
+  public async run(client: Client) {}
+}
